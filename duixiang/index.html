@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="id"></canvas>
+<script>
+    var c = document.getElementById("id");
+    var ctx=c.getContext("2d");
+    Draw.prototype.chushihua=function(){
+        ctx.beginPath();
+        ctx.fillStyle=this.color;
+        ctx.rect(this.x,this.y,this.w,this.h);
+        ctx.fill();
+        ctx.stroke();
+    }
+  function Draw(){
+       this.x=20;
+       this.y=20;
+       this.w=20;
+       this.h=20;
+       this.color="#000";
+   }
+   var draw = new Draw();
+    draw.chushihua();
+
+
+</script>
+
+</body>
+</html>
